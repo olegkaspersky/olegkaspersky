@@ -1,0 +1,81 @@
+\documentclass[10.5pt]{article}
+\usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{XCharter}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{bookmark}
+\raggedright
+\pagestyle{empty}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt}
+
+\begin{document}
+
+\centerline{\Large Oleg Kasperskii, DevOps Engineer}
+
+\vspace{4pt}
+
+\centerline{\href{mailto:oleg.kaspersky0@gmail.com}{oleg.kaspersky0@gmail.com} | \href{https://www.linkedin.com/in/oleg-kasperskii/}{LinkedIn}}
+
+\vspace{-8pt}
+
+\section*{Summary}
+DevOps Engineer with 7 years of experience in CI/CD, Kubernetes, Infrastructure as Code, and Unreal Engine build systems. Passionate about developer experience and platform engineering. Led teams, built observability platforms, and delivered workflow improvements for AAA game development.
+
+\vspace{-6pt}
+
+\section*{Skills}
+\textbf{CI/CD:} TeamCity, Docker, Helm, ArgoCD \\
+\textbf{Cloud \& Infrastructure:} GCP, AWS, Kubernetes (GKE), Ansible, Terraform, Terragrunt, Packer \\
+\textbf{Observability:} Prometheus, VictoriaMetrics, Grafana, Loki, Tempo, Vector, OpenTelemetry \\
+\textbf{Security:} CIS benchmarks, Lynis, Sigstore, SBOM, Docker Scout \\
+\textbf{Version Control:} Git, Perforce \\
+\textbf{Programming languages:} Python, Unreal Engine C++, C\#, Go \\
+\textbf{Architecture:} System design, EventStorming, Microservices design, Project planning, Software evolution \\
+\textbf{Unreal Engine:} engine mods, UGS, Horde, Unsync, UAT, BuildGraph, RoboMerge, Zen, content validations \\
+
+\vspace{-6pt}
+
+\section*{Experience}
+\textbf{Lead DevOps Engineer,} GS-Studio (Unannounced UE5 AAA title) \hfill July 2024 -- February 2026 \\
+\vspace{-8pt}
+\begin{itemize}
+  \item Led design and implementation of on-demand game server backend provisioning system; wrote Kubernetes operator component. Reduced infrastructure costs by 67\% and provisioning time by 95\% (10 min → 30 sec).
+  \item Led DevOps team of 3 engineers and cross-functional project teams (backend, Unreal, DevOps); owned milestone planning and platform vision. Mentored via development plans, code reviews, pair programming, and knowledge sharing
+  \item Implemented quality gates and build analytics (step timings, cache efficiency, package sizes); introduced ratcheting to prevent warning growth. Reduced code warnings from ~5,000 to ~2,700; cut content warnings from 250 to 30 (88\%)
+  \item Integrated GitOps with ArgoCD; automated dependency updates with RenovateBot, keeping infrastructure modern, secure and in sync with codebase
+  \item Built observability stack with OpenTelemetry instrumentation; enabled USE/RED metrics and golden signals monitoring. Resolved critical k8s API, messaging, and disk I/O issues through actionable insights
+  \item Implemented DevSecOps practices for Docker images: SBOM generation, provenance, artifact signing with Sigstore, vulnerability scanning with Docker Scout
+  \item Developed Ansible roles for security hardening to CIS benchmarks; implemented baseline configurations for Ubuntu, Nginx, and Docker; ran Lynis audits to track security posture and drive remediation
+  \item Introduced UE ecosystem tools: UGS (simplified artist/dev workflows, precompiled binaries), Horde (build analytics), UAT/BuildGraph (unified CI/CD build scenarios), Zen (shared caches for faster editor loads), RoboMerge (automated branch merging), content validations
+  \item Reduced build sync times from 15 min to 1-5 min (67-93\%) via Unsync integration
+  \item Cut UnrealGameSync Pre-compiled Binaries sync times from 15 min to 7 min (53\%) via Horde analytics and Perforce tuning
+\end{itemize}
+
+\textbf{DevOps Engineer,} Sperasoft (Mortal Kombat Mobile, Injustice 2) \hfill June 2022 -- July 2024 \\
+\vspace{-8pt}
+\begin{itemize}
+  \item Built and maintained CI/CD pipelines for Unreal Engine mobile projects and SDKs; developed Python build libraries and QA tools
+  \item Integrated static analysis and linting into CI for code quality enforcement
+  \item Migrated build infrastructure to IaC (Ansible) and TeamCity configs to Kotlin DSL, enabling consistent management and eliminating config drift
+  \item Reduced full Perforce workspace sync times from 50 min to 12 min (76\%) by tuning Perforce proxies
+  \item Mentored engineers and trained successor; established best practices (linting, formatting, documentation, code review, pipelines) for Ansible and TeamCity code
+\end{itemize}
+
+\textbf{System Administrator,} Nival Production \hfill September 2019 -- November 2021 \\
+\vspace{-8pt}
+\begin{itemize}
+  \item Managed 100+ servers across dev and staging environments; configured hardware servers, switches, RAID, storage arrays, site-to-site VPNs
+  \item Maintained TeamCity, GitLab, Atlassian, AD DS, Zabbix with monitoring and alerting
+  \item Automated sysadmin tasks with Ansible and Python
+\end{itemize}
+
+\end{document}
