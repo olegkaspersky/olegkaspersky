@@ -1,2 +1,2 @@
 - Hi, I’m @olegkaspersky
-- I’m interested in Zabbix, Graphana, Game Development, Automation
+- I’m interested in Game Development, Automation
