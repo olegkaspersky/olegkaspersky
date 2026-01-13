@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\usepackage{bookmark}
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt}
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Oleg Kasperskii}
+
+\vspace{5pt}
+
+% contact information
+\centerline{\href{mailto:oleg.kaspersky0@gmail.com}{oleg.kaspersky0@gmail.com} | \href{https://t.me/oki071}{Telegram} | \href{https://www.linkedin.com/in/oleg-kaspersky-7887511a7/}{LinkedIn} | \href{https://github.com/olegkaspersky}{GitHub}}
+
+\vspace{-10pt}
+
+% summary section
+\section*{Summary}
+DevOps Engineer with 5+ years of experience in CI/CD, Kubernetes, Infrastructure as Code, and Unreal Engine build systems. Proven track record leading teams, building observability platforms, and delivering workflow improvements in game development environments.
+
+\vspace{-6.5pt}
+
+% skills section
+\section*{Skills}
+\textbf{CI/CD:} TeamCity, Docker, Helm, ArgoCD \\
+\textbf{Cloud \& Infrastructure:} GCP, Kubernetes, Ansible, Terraform \\
+\textbf{Observability:} VictoriaMetrics, Grafana, Grafana Loki, Grafana Tempo, Vector, OpenTelemetry \\
+\textbf{Programming:} Python, Unreal Engine C++ and C\#, Go \\
+\textbf{Version Control:} Git, Perforce \\
+\textbf{Unreal Engine:} Content validation, engine modifications, UnrealGameSync, Horde, Unsync, UAT automation projects, BuildGraph, Unreal Cloud DDC, RoboMerge \\
+\textbf{Architecture:} System design, EventStorming, Microservices design, Project planning, Software evolution
+
+\vspace{-6.5pt}
+
+% experience section
+\section*{Experience}
+\textbf{Lead DevOps Engineer,} GS-Studio -- Remote \hfill July 2024 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Led 3 DevOps engineers; owned planning, technical vision, and mentorship
+  \item Reduced build sync times from 15 min to 1-5 min (67-93\%) via Unsync integration
+  \item Cut UnrealGameSync PCBs sync times from 15 min to 7 min (53\%) via Horde analytics and Perforce tuning
+  \item Designed system to provision backend services required by game servers on-demand; cutting development infrastructure costs by 67\% (3x) and backend provisioning time from 10 min to 30 sec (95\%)
+  \item Built observability stack (logging, metrics, tracing, alerting); resolving critical k8s API, unroutable messages and disk IO issues and providing teams with information on system latency, throughput, saturation and availability
+  \item Guided instrumentation of server-side services with OpenTelemetry for distributed tracing and custom metrics
+  \item Implemented quality gates for code and content; remediated 3,000+ code issues including 250 critical, guided art teams to reduce content warnings from 250 to 30 (88\%)
+  \item Implemented supply chain security: SBOM, provenance, artifact signing, signature verification
+  \item Introduced Unreal Engine ecosystem tools: UnrealGameSync, Horde, RoboMerge, BuildGraph, Cloud DDC
+  \item Automated Kubernetes operators and observability stack workloads upgrades with Renovate and ArgoCD
+\end{itemize}
+
+\textbf{DevOps Engineer,} Sperasoft, Keywords D.O.O -- Belgrade, Serbia \hfill June 2022 -- July 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built CI/CD pipelines for Unreal Engine mobile projects: builds, packaging, deployments
+  \item Integrated static analysis and linting into CI for code quality enforcement
+  \item Migrated infra to IaC (Ansible), eliminating config drift
+  \item Converted TeamCity to Configuration as Code (Kotlin DSL)
+  \item Reduced full workspace Perforce sync times from 50 min to 12 min (76\%)
+  \item Built custom build notifications to reduce team alert fatigue
+  \item Mentored engineers, conducted interviews, established best practices
+\end{itemize}
+
+\textbf{System Administrator,} Nival Production -- Saint-Petersburg, Russia \hfill September 2019 -- October 2021 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Managed 100+ servers across dev and staging environments
+  \item Maintained TeamCity, GitLab, Atlassian, AD DS, Zabbix with monitoring and alerting
+  \item Automated sysadmin tasks with Ansible, Puppet, Python, PowerShell
+\end{itemize}
+
+\vspace{-18.5pt}
+
+\end{document}

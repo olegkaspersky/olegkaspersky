@@ -1,0 +1,100 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1,T2A]{fontenc}        % output encoding (T2A for Cyrillic)
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage[russian]{babel}         % Russian language support
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\usepackage{bookmark}
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt}
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Олег Касперский}
+
+\vspace{5pt}
+
+% contact information
+\centerline{\href{mailto:oleg.kaspersky0@gmail.com}{oleg.kaspersky0@gmail.com} | \href{https://t.me/oki071}{Telegram} | \href{https://www.linkedin.com/in/oleg-kaspersky-7887511a7/}{LinkedIn} | \href{https://github.com/olegkaspersky}{GitHub}}
+
+\vspace{-10pt}
+
+% summary section
+\section*{О себе}
+DevOps-инженер с опытом более 6 лет в CI/CD, Kubernetes, Infrastructure as Code и системах сборки Unreal Engine. Подтверждённый опыт руководства командами, построения платформ наблюдаемости и оптимизации рабочих процессов в средах разработки игр.
+
+\vspace{-6.5pt}
+
+% skills section
+\section*{Навыки}
+\textbf{CI/CD:} TeamCity, Docker, Helm, ArgoCD \\
+\textbf{Облако и инфраструктура:} Google Cloud Platform, Kubernetes, Ansible, Terraform \\
+\textbf{Наблюдаемость:} VictoriaMetrics, Grafana, Grafana Loki, Grafana Tempo, Vector, OpenTelemetry \\
+\textbf{Программирование:} Python, Unreal Engine C++ и C\#, Go \\
+\textbf{Системы контроля версий:} Git, Perforce \\
+\textbf{Unreal Engine:} Валидация контента, модификации движка, UnrealGameSync, Horde, Unsync, автоматизация UAT, BuildGraph, Unreal Cloud DDC, RoboMerge \\
+\textbf{Архитектура:} Проектирование систем, архитектура решений, проектирование микросервисов, планирование проектов, эволюция ПО
+
+\vspace{-6.5pt}
+
+% experience section
+\section*{Опыт работы}
+\textbf{Ведущий DevOps-инженер,} GS-Studio -- Удалённо \hfill Июль 2024 -- Настоящее время \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Руководил командой из 3 DevOps-инженеров; отвечал за планирование, техническое видение и менторство
+  \item Сократил время синхронизации сборок с 15 мин до 1-5 мин благодаря интеграции Unsync
+  \item Уменьшил время синхронизации PCB в UnrealGameSync с 15 мин до 7 мин с помощью аналитики Horde и настройки Perforce
+  \item Спроектировал инфраструктуру по разворачиванию инфраструктуры для игровых серверов по требованию; сократил затраты на инфраструктуру разработки в 3 раза и время развёртывания бэкенда с 10 мин до 30 сек
+  \item Построил стек наблюдаемости (логирование, метрики, трассировка, алертинг); решил критические проблемы k8s API, недоставляемых сообщений и дискового ввода-вывода
+  \item Руководил инструментированием серверных сервисов с OpenTelemetry для распределённой трассировки и генерации кастомных метрик
+  \item Внедрил проверки для кода и контента; исправив 4000+ проблем в коде, включая 250 критических, снизив количество предупреждений по контенту с 250 до 30
+  \item Внедрил безопасность цепочки поставок: SBOM, происхождение артефактов, подписание и верификация подписей
+  \item Внедрил инструменты экосистемы Unreal Engine: UnrealGameSync, Horde, RoboMerge, BuildGraph, Cloud DDC
+  \item Автоматизировал обновление сервисов размещенных в Kubernetes с помощью RenovateBot и ArgoCD
+\end{itemize}
+
+\textbf{DevOps-инженер,} Sperasoft, Keywords D.O.O -- Белград, Сербия \hfill Июнь 2022 -- Июль 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Создал и обслуживал CI/CD пайплайны для мобильных проектов на Unreal Engine: сборка, упаковка, развёртывание
+  \item Интегрировал статический анализ и линтинг в CI для контроля качества кода
+  \item Перевёл инфраструктуру на IaC (Ansible), устранив дрейф конфигурации
+  \item Перевёл TeamCity на Configuration as Code (Kotlin DSL)
+  \item Сократил время полной синхронизации рабочего пространства Perforce с 50 мин до 12 мин
+  \item Создал кастомные уведомления о сборках для снижения усталости команды от алертов
+  \item Менторил инженеров, проводил собеседования, внедрял лучшие практики
+\end{itemize}
+
+\textbf{Системный администратор,} Nival Production -- Санкт-Петербург, Россия \hfill Сентябрь 2019 -- Октябрь 2021 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Управлял 100+ серверами в средах разработки и стейджинга
+  \item Поддерживал TeamCity, GitLab, Atlassian, AD DS, Zabbix с мониторингом и алертингом
+  \item Автоматизировал задачи системного администрирования с помощью Ansible, Puppet, Python, PowerShell
+\end{itemize}
+
+\vspace{-18.5pt}
+
+\end{document}
