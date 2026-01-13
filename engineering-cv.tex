@@ -48,12 +48,12 @@ DevOps Engineer with 5+ years of experience in CI/CD, Kubernetes, Infrastructure
 % skills section
 \section*{Skills}
 \textbf{CI/CD:} TeamCity, Docker, Helm, ArgoCD \\
-\textbf{Cloud \& Infrastructure:} GCP, Kubernetes, Ansible, Terraform \\
-\textbf{Observability:} VictoriaMetrics, Grafana, Grafana Loki, Grafana Tempo, Vector, OpenTelemetry \\
-\textbf{Programming:} Python, Unreal Engine C++ and C\#, Go \\
+\textbf{Cloud \& Infrastructure:} GCP, AWS, Kubernetes (GKE), Ansible, Terraform, Terragrunt \\
+\textbf{Observability:} VictoriaMetrics (Prometheus-compatible alternative), Grafana, Grafana Loki, Grafana Tempo, Vector, OpenTelemetry \\
+\textbf{Programming languages:} Python, Unreal Engine C++, C\#, Go \\
 \textbf{Version Control:} Git, Perforce \\
-\textbf{Unreal Engine:} Content validation, engine modifications, UnrealGameSync, Horde, Unsync, UAT automation projects, BuildGraph, Unreal Cloud DDC, RoboMerge \\
 \textbf{Architecture:} System design, EventStorming, Microservices design, Project planning, Software evolution
+\textbf{Unreal Engine:} Content validation, engine modifications, UnrealGameSync, Horde, Unsync, UAT automation projects, BuildGraph, Unreal Cloud DDC, RoboMerge, Zen \\
 
 \vspace{-6.5pt}
 
@@ -62,16 +62,16 @@ DevOps Engineer with 5+ years of experience in CI/CD, Kubernetes, Infrastructure
 \textbf{Lead DevOps Engineer,} GS-Studio -- Remote \hfill July 2024 -- Present \\
 \vspace{-9pt}
 \begin{itemize}
-  \item Led 3 DevOps engineers; owned planning, technical vision, and mentorship
-  \item Reduced build sync times from 15 min to 1-5 min (67-93\%) via Unsync integration
-  \item Cut UnrealGameSync PCBs sync times from 15 min to 7 min (53\%) via Horde analytics and Perforce tuning
-  \item Designed system to provision backend services required by game servers on-demand; cutting development infrastructure costs by 67\% (3x) and backend provisioning time from 10 min to 30 sec (95\%)
-  \item Built observability stack (logging, metrics, tracing, alerting); resolving critical k8s API, unroutable messages and disk IO issues and providing teams with information on system latency, throughput, saturation and availability
+  \item Led team of 3 engineers; owned milestone planning, platform technical vision, and mentorship
+  \item Integrated GitOps with ArgoCD. In conjunction with RenovateBot automated dependency updates, keeping infrastructure modern, secure and up-to-date
+  \item Designed system to provision backend services for game servers on-demand, reducing development infrastructure costs by 67\% (3x) and provisioning time from 10 min to 30 sec (95\%)
+  \item Built observability stack (logging, metrics, tracing, alerting); resolved critical k8s API, unroutable message, and disk I/O issues; enabled teams to monitor latency, throughput, saturation, and availability
   \item Guided instrumentation of server-side services with OpenTelemetry for distributed tracing and custom metrics
-  \item Implemented quality gates for code and content; remediated 3,000+ code issues including 250 critical, guided art teams to reduce content warnings from 250 to 30 (88\%)
   \item Implemented supply chain security: SBOM, provenance, artifact signing, signature verification
+  \item Implemented quality gates for code and content; introduced ratcheting to prevent warning growth; reduced code style and best practices warnings from ~5,000 to ~2,700 (including 250 critical); cut content warnings from 250 to 30 (88\%)
   \item Introduced Unreal Engine ecosystem tools: UnrealGameSync, Horde, RoboMerge, BuildGraph, Cloud DDC
-  \item Automated Kubernetes operators and observability stack workloads upgrades with Renovate and ArgoCD
+  \item Reduced build sync times from 15 min to 1-5 min (67-93\%) via Unsync integration
+  \item Cut UnrealGameSync Precompiled Binaries (PCBs) sync times from 15 min to 7 min (53\%) via Horde analytics and Perforce tuning
 \end{itemize}
 
 \textbf{DevOps Engineer,} Sperasoft, Keywords D.O.O -- Belgrade, Serbia \hfill June 2022 -- July 2024 \\
