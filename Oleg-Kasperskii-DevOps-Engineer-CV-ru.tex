@@ -1,66 +1,51 @@
-\documentclass[11pt]{article}       % set main text size
-\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
-top=0.5in,                          % specify top page margin
-bottom=0.5in,                       % specify bottom page margin
-left=0.5in,                         % specify left page margin
-right=0.5in]{geometry}              % specify right page margin
-
-\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
-\usepackage[T1,T2A]{fontenc}        % output encoding (T2A for Cyrillic)
-\usepackage[utf8]{inputenc}         % input encoding
-\usepackage[russian]{babel}         % Russian language support
-\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
-\usepackage[hidelinks]{hyperref}    % format hyperlinks
-\usepackage{titlesec}               % enable section title customization
+\documentclass[11pt]{article}
+\usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{XCharter}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
 \usepackage{bookmark}
-\raggedright                        % disable text justification
-\pagestyle{empty}                   % disable page numbering
+\raggedright
+\pagestyle{empty}
 
-% ensure PDF output will be all-Unicode and machine-readable
 \input{glyphtounicode}
 \pdfgentounicode=1
 
-% format section headings: bolding, size, white space above and below
 \titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
-
-% format bullet points: size, white space above and below, white space between bullets
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
 \setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt}
 
-% resume starts here
 \begin{document}
 
-% name
-\centerline{\Huge Олег Касперский}
+\centerline{\Huge Олег Касперский, DevOps-инженер}
 
 \vspace{5pt}
 
-% contact information
-\centerline{\href{mailto:oleg.kaspersky0@gmail.com}{oleg.kaspersky0@gmail.com} | \href{https://t.me/oki071}{Telegram} | \href{https://www.linkedin.com/in/oleg-kaspersky-7887511a7/}{LinkedIn} | \href{https://github.com/olegkaspersky}{GitHub}}
+\centerline{\href{mailto:oleg.kaspersky0@gmail.com}{oleg.kaspersky0@gmail.com} | \href{https://t.me/oki071}{Telegram} | \href{https://www.linkedin.com/in/oleg-kasperskii/}{LinkedIn} | Белград, Сербия}
 
 \vspace{-10pt}
 
-% summary section
 \section*{О себе}
 DevOps-инженер с опытом более 5 лет в CI/CD, Kubernetes, Infrastructure as Code и системах сборки Unreal Engine. Подтверждённый опыт руководства командами, построения платформ наблюдаемости и оптимизации рабочих процессов в средах разработки игр.
 
 \vspace{-6.5pt}
 
-% skills section
 \section*{Навыки}
 \textbf{CI/CD:} TeamCity, Docker, Helm, ArgoCD \\
 \textbf{Облако и инфраструктура:} GCP, AWS, Kubernetes (GKE), Ansible, Terraform, Terragrunt \\
 \textbf{Наблюдаемость:} VictoriaMetrics (Prometheus-совместимая альтернатива), Grafana, Grafana Loki, Grafana Tempo, Vector, OpenTelemetry \\
-\textbf{Unreal Engine:} Валидация контента, модификации движка, UnrealGameSync, Horde, Unsync, UAT, BuildGraph, Unreal Cloud DDC, RoboMerge, Zen \\
+\textbf{Unreal Engine:} Валидация контента, модификации движка, UGS, Horde, Unsync, UAT, BuildGraph, Cloud DDC, RoboMerge, Zen \\
 \textbf{Системы контроля версий:} Git, Perforce \\
 \textbf{Программирование:} Python, Unreal Engine C++, C\#, Go \\
 \textbf{Архитектура:} Проектирование систем, EventStorming, проектирование микросервисов, планирование проектов, эволюция ПО
 
 \vspace{-6.5pt}
 
-% experience section
 \section*{Опыт работы}
-\textbf{Ведущий DevOps-инженер,} GS-Studio -- Удалённо \hfill Июль 2024 -- Настоящее время \\
+\textbf{Ведущий DevOps-инженер,} GS-Studio (Неанонсированный проект на UE5) -- Белград, Сербия \hfill Июль 2024 -- Настоящее время \\
 \vspace{-9pt}
 \begin{itemize}
   \item Руководил командой из 3 инженеров; отвечал за планирование, техническое видение и менторство
@@ -75,7 +60,7 @@ DevOps-инженер с опытом более 5 лет в CI/CD, Kubernetes, 
   \item Спроектировал систему развёртывания бэкенд-сервисов для игровых серверов по требованию; сократил затраты на инфраструктуру разработки на 67\% (в 3 раза) и время развёртывания с 10 мин до 30 сек (95\%)
 \end{itemize}
 
-\textbf{DevOps-инженер,} Sperasoft, Keywords D.O.O -- Белград, Сербия \hfill Июнь 2022 -- Июль 2024 \\
+\textbf{DevOps-инженер,} Sperasoft (Mortal Kombat Mobile, Injustice 2) -- Белград, Сербия \hfill Июнь 2022 -- Июль 2024 \\
 \vspace{-9pt}
 \begin{itemize}
   \item Создал и обслуживал CI/CD пайплайны для мобильных проектов на Unreal Engine, SDK: сборка, упаковка, развёртывание
@@ -93,7 +78,5 @@ DevOps-инженер с опытом более 5 лет в CI/CD, Kubernetes, 
   \item Поддерживал TeamCity, GitLab, Atlassian, AD DS, Zabbix с мониторингом и алертингом
   \item Автоматизировал задачи системного администрирования с помощью Ansible, Puppet, Python, PowerShell
 \end{itemize}
-
-\vspace{-18.5pt}
 
 \end{document}
