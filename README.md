@@ -1,18 +1,18 @@
-# Hi, I'm Oleg Kaspersky
+# Hi, I'm Oleg Kasperskii
 
-**Lead DevOps Engineer** with 6+ years of experience in CI/CD, Kubernetes, Infrastructure as Code, and Unreal Engine build systems.
+DevOps Engineer with 5+ years of experience in CI/CD, Kubernetes, Infrastructure as Code, and Unreal Engine build systems.
 
 ## About Me
 
-- Leading DevOps teams and building observability platforms
-- Specializing in game development infrastructure and workflow optimization
-- Open to Remote | Open to Relocation: Japan, USA, Sweden
+I like games, gamedev, observability, and tech in general. Building infrastructure for game studios is fun and challenging.
 
-## Tech Stack
+Interested in solution architecture and system design. I take ownership of my work and see things through. Have had the chance to lead small teams along the way.
+
+## What I Worked With
 
 **CI/CD:** TeamCity, Docker, Helm, ArgoCD
 
-**Cloud & Infrastructure:** Google Cloud Platform, Kubernetes, Ansible, Terraform
+**Cloud & Infrastructure:** GCP, AWS, Kubernetes, Ansible, Terraform, Terragrunt
 
 **Observability:** VictoriaMetrics, Grafana, Loki, Tempo, Vector, OpenTelemetry
 
@@ -21,6 +21,12 @@
 **Version Control:** Git, Perforce
 
 **Unreal Engine:** Horde, BuildGraph, UnrealGameSync, Unsync, Cloud DDC, RoboMerge
+
+**Architecture:** System design, Microservices, EventStorming
+
+## Open To
+
+Remote | Relocation: Japan, USA, Sweden
 
 ## Connect
 
