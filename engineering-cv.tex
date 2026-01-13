@@ -1,89 +1,74 @@
-\documentclass[11pt]{article}       % set main text size
-\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
-top=0.5in,                          % specify top page margin
-bottom=0.5in,                       % specify bottom page margin
-left=0.5in,                         % specify left page margin
-right=0.5in]{geometry}              % specify right page margin
-
-\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
-\usepackage[T1]{fontenc}            % output encoding
-\usepackage[utf8]{inputenc}         % input encoding
-\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
-\usepackage[hidelinks]{hyperref}    % format hyperlinks
-\usepackage{titlesec}               % enable section title customization
+\documentclass[11pt]{article}
+\usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{XCharter}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
 \usepackage{bookmark}
-\raggedright                        % disable text justification
-\pagestyle{empty}                   % disable page numbering
+\raggedright
+\pagestyle{empty}
 
-% ensure PDF output will be all-Unicode and machine-readable
 \input{glyphtounicode}
 \pdfgentounicode=1
 
-% format section headings: bolding, size, white space above and below
 \titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
-
-% format bullet points: size, white space above and below, white space between bullets
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
 \setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt}
 
-% resume starts here
 \begin{document}
 
-% name
 \centerline{\Huge Oleg Kasperskii}
 
 \vspace{5pt}
 
-% contact information
 \centerline{\href{mailto:oleg.kaspersky0@gmail.com}{oleg.kaspersky0@gmail.com} | \href{https://t.me/oki071}{Telegram} | \href{https://www.linkedin.com/in/oleg-kaspersky-7887511a7/}{LinkedIn} | \href{https://github.com/olegkaspersky}{GitHub}}
 
 \vspace{-10pt}
 
-% summary section
 \section*{Summary}
 DevOps Engineer with 5+ years of experience in CI/CD, Kubernetes, Infrastructure as Code, and Unreal Engine build systems. Proven track record leading teams, building observability platforms, and delivering workflow improvements in game development environments.
 
 \vspace{-6.5pt}
 
-% skills section
 \section*{Skills}
 \textbf{CI/CD:} TeamCity, Docker, Helm, ArgoCD \\
 \textbf{Cloud \& Infrastructure:} GCP, AWS, Kubernetes (GKE), Ansible, Terraform, Terragrunt \\
 \textbf{Observability:} VictoriaMetrics (Prometheus-compatible alternative), Grafana, Grafana Loki, Grafana Tempo, Vector, OpenTelemetry \\
-\textbf{Programming languages:} Python, Unreal Engine C++, C\#, Go \\
+\textbf{Unreal Engine:} Content validation, engine mods, UnrealGameSync, Horde, Unsync, UAT, BuildGraph, Unreal Cloud DDC, RoboMerge, Zen \\
 \textbf{Version Control:} Git, Perforce \\
+\textbf{Programming languages:} Python, Unreal Engine C++, C\#, Go \\
 \textbf{Architecture:} System design, EventStorming, Microservices design, Project planning, Software evolution
-\textbf{Unreal Engine:} Content validation, engine modifications, UnrealGameSync, Horde, Unsync, UAT automation projects, BuildGraph, Unreal Cloud DDC, RoboMerge, Zen \\
 
 \vspace{-6.5pt}
 
-% experience section
 \section*{Experience}
 \textbf{Lead DevOps Engineer,} GS-Studio -- Remote \hfill July 2024 -- Present \\
 \vspace{-9pt}
 \begin{itemize}
   \item Led team of 3 engineers; owned milestone planning, platform technical vision, and mentorship
-  \item Integrated GitOps with ArgoCD. In conjunction with RenovateBot automated dependency updates, keeping infrastructure modern, secure and up-to-date
-  \item Designed system to provision backend services for game servers on-demand, reducing development infrastructure costs by 67\% (3x) and provisioning time from 10 min to 30 sec (95\%)
-  \item Built observability stack (logging, metrics, tracing, alerting); resolved critical k8s API, unroutable message, and disk I/O issues; enabled teams to monitor latency, throughput, saturation, and availability
-  \item Guided instrumentation of server-side services with OpenTelemetry for distributed tracing and custom metrics
-  \item Implemented supply chain security: SBOM, provenance, artifact signing, signature verification
   \item Implemented quality gates for code and content; introduced ratcheting to prevent warning growth; reduced code style and best practices warnings from ~5,000 to ~2,700 (including 250 critical); cut content warnings from 250 to 30 (88\%)
   \item Introduced Unreal Engine ecosystem tools: UnrealGameSync, Horde, RoboMerge, BuildGraph, Cloud DDC
   \item Reduced build sync times from 15 min to 1-5 min (67-93\%) via Unsync integration
   \item Cut UnrealGameSync Precompiled Binaries (PCBs) sync times from 15 min to 7 min (53\%) via Horde analytics and Perforce tuning
+  \item Integrated GitOps with ArgoCD. In conjunction with RenovateBot automated dependency updates, keeping infrastructure modern, secure and up-to-date
+  \item Built observability stack (logging, metrics, tracing, alerting); resolved critical k8s API, unroutable message, and disk I/O issues; enabled teams to monitor latency, throughput, saturation, and availability
+  \item Guided instrumentation of server-side services with OpenTelemetry for distributed tracing and custom metrics
+  \item Implemented supply chain security: SBOM, provenance, artifact signing, signature verification
+  \item Designed system to provision backend services for game servers on-demand, reducing development infrastructure costs by 67\% (3x) and provisioning time from 10 min to 30 sec (95\%)
 \end{itemize}
 
 \textbf{DevOps Engineer,} Sperasoft, Keywords D.O.O -- Belgrade, Serbia \hfill June 2022 -- July 2024 \\
 \vspace{-9pt}
 \begin{itemize}
-  \item Built CI/CD pipelines for Unreal Engine mobile projects: builds, packaging, deployments
+  \item Built and maintained CI/CD pipelines for Unreal Engine mobile projects, SDKs: builds, packaging, deployments
   \item Integrated static analysis and linting into CI for code quality enforcement
-  \item Migrated infra to IaC (Ansible), eliminating config drift
-  \item Converted TeamCity to Configuration as Code (Kotlin DSL)
-  \item Reduced full workspace Perforce sync times from 50 min to 12 min (76\%)
+  \item Migrated build infrastructure to IaC (Ansible), eliminating config drift
+  \item Converted TeamCity build configurations to Configuration as Code (Kotlin DSL),  eliminating manual config creation and drift
+  \item Reduced full  Perforce workspace sync times from 50 min to 12 min by tuning Perforce proxies (76\%)
   \item Built custom build notifications to reduce team alert fatigue
-  \item Mentored engineers, conducted interviews, established best practices
+  \item Mentored engineers, conducted interviews, established best practices withing department for Ansible and TeamCity code
 \end{itemize}
 
 \textbf{System Administrator,} Nival Production -- Saint-Petersburg, Russia \hfill September 2019 -- October 2021 \\
